@@ -1,0 +1,72 @@
+.register{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fdfdfd;
+    font-size: 1rem;
+}
+.register-container{
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 50vh; */
+    width: 100%;
+   max-width: 490px;
+    padding: 50px 25px;
+    background: #fff;
+}
+.register-title{
+    font-weight: 600;
+    letter-spacing: .2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: .8rem;
+}
+.register-form{
+margin: 2rem 0;
+}
+.register-form input{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: .8rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--gray);
+}
+.register-form input:last-child{
+    margin-bottom: 0;
+}
+.register-form label{
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+.register-button{
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--secondary);
+    border: none;
+    color: var(--light);
+    font-size: 1rem;
+    margin: .3rem 0;
+    cursor: pointer;
+}
+.register-button:hover{
+    background-color: var(--gray-dark);
+}   
+.register-container p{
+    margin: 0.5rem 0;
+}
+
+.registerLink{
+    color: rgb(61, 113, 156);
+    text-decoration: none;
+}
+@media screen and (max-width:500px){
+    .register-title{
+        font-size: 1.2rem;
+    }
+}

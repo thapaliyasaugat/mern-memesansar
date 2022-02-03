@@ -1,0 +1,134 @@
+.post-page{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+.post-page-container{
+    width: 100%;
+    max-width: 1300px;
+    box-sizing: border-box;
+}
+.post-page-body{
+    display: flex;
+    margin-top: .6rem;
+    height: 80vh;
+}
+.post-page-left{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.post-page-left-image{
+    background-color: rgb(107, 106, 107);
+    flex: 1;
+    height: 100%;
+}
+.post-page-left img{
+    width: 100%;
+    height: 100%;
+    /* height: 20px; */
+    object-fit: cover;
+}
+.post-page-bottom{
+    display: flex;
+    margin: .5rem 0;
+    margin-left: calc(56px + .5rem);
+    justify-content: space-between;
+    padding: 0 .9rem;
+}
+.post-page-bottom-item{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.post-page-bottom-item p{
+    margin-right: .4rem;
+    font-size: 1.6rem;
+}
+.post-page-bottom-sign{
+    font-size: 2rem !important;
+    color: var(--primary);
+}
+.post-page-right{
+    flex: 3;
+    margin-left: 1rem;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+.post-page-right-top{
+    display: flex;
+    align-items: center;
+}
+.post-page-right-top-right{
+    margin-left: .5rem;
+    color: var(--primary);
+}
+.post-page-right-text{
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    color: var(--gray-dark);
+    text-indent: calc(56px + .6rem);
+}
+.post-page-comment-top{
+    display: flex;
+    align-items: center;
+}
+.post-page-comment-userdet{
+    margin-left: .5rem;
+    color: var(--primary);
+}
+.post-page-comment-text{
+    text-indent: calc(56px + .6rem);
+    padding: 0 .6rem;
+}
+.post-page-create-comment textarea{
+    resize: none;
+    height: 100px;
+    width: 100%;
+    padding: .4rem;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+.post-page-create-comment button{
+padding: .6rem 1rem;
+background-color: #fff;
+font-size: 1.2rem;
+border: 1px solid var(--primary);
+cursor: pointer;
+}
+.post-page-right-comment{
+flex: 1;
+overflow-y: scroll;
+overflow-x: hidden; 
+}
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #ddd; 
+    border-radius: 15px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--gray); 
+    border-radius: 15px;
+  }
+  
+.post-page-create-comment button:hover{
+    background-color: var(--primary);
+    color: var(--light);
+}
+@media screen and (max-width:885px){
+    .post-page-body{
+        /* flex-direction: column; */
+        display: block;
+    }
+    .post-page-left-image{
+        width: 100%;
+        height: 50%;
+    }
+    .post-page-right{
+        margin-top: 20px;
+    }
+}
