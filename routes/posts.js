@@ -65,6 +65,7 @@ router.get("/profile/:user_id", verifyToken, async (req, res) => {
 //timeline post - of yours+followings - shared post of your friend
 router.get("/timeline/posts", verifyToken, async (req, res) => {
     try {
+        console.log(req.user)
         const user = await User.findById(req.user.userId)
         const myposts = await Post.find({ userId: req.user.userId })
         const friendsPosts = await Promise.all(

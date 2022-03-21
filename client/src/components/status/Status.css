@@ -37,7 +37,10 @@ border-radius: 10px;
     display: flex;
     /* align-self: flex-end; */
 }
-.status-right-bottom-left > div{
+.status-right-bottom-left label input[type = 'file']{
+display:none;
+}
+.status-right-bottom-left > label{
     display: flex;
     align-items: center;
     margin-right: .8rem;
