@@ -85,6 +85,7 @@
     align-items: center;
     background-color: #de5246;
     color: white;
+    cursor: pointer;
 }
 
 .login-container .googleLogin p {

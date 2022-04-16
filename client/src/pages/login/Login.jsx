@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../redux/apiCalls";
 import { Google } from '@mui/icons-material';
+import { GoogleLogin } from 'react-google-login';
 const Login = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch();
@@ -25,6 +26,23 @@ const Login = () => {
         }
 
     }
+    const successresponseGoogle = async (res) => {
+        const result = res?.profileObj;
+        console.log(result);
+        // const token = res?.tokenId;
+        //continue
+        try {
+
+        } catch (error) {
+            console.log(error)
+            toast("Error signing in with google");
+        }
+    }
+    const failureresponseGoogle = (error) => {
+        console.log(error);
+        console.log("google login unsuccessfull.")
+
+    }
     return (
 
         <div className="login">
@@ -42,10 +60,19 @@ const Login = () => {
                 {error && <p style={{ color: "#ee2727" }}>Error Logging in.</p>}
                 <p>You don't have an account? <Link className="loginLink" to="/register"> Register Now</Link></p>
                 <h3 style={{ margin: "20px 0" }}>OR</h3>
-                <button className="googleLogin">
-                    <Google />
-                    <p>Signin with Google</p>
-                </button>
+
+                <GoogleLogin
+                    clientId="542043003230-2ho424qv0j97dav2l50sigu347qv3055.apps.googleusercontent.com"
+                    render={(renderProps) => (
+                        <button className="googleLogin" onClick={renderProps.onClick} disabled={renderProps.disabled}>
+                            <Google />
+                            <p>Signin with Google</p>
+                        </button>
+                    )}
+                    onSuccess={successresponseGoogle}
+                    onFailure={failureresponseGoogle}
+                    cookiePolicy={'single_host_origin'}
+                />
             </div>
         </div>
     )
