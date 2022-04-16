@@ -1,4 +1,4 @@
-.login{
+.login {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -7,7 +7,8 @@
     background: #fdfdfd;
     font-size: 1rem;
 }
-.login-container{
+
+.login-container {
     border: 1px solid #ddd;
     display: flex;
     flex-direction: column;
@@ -15,21 +16,24 @@
     justify-content: center;
     /* height: 50vh; */
     width: 100%;
-   max-width: 490px;
+    max-width: 490px;
     padding: 50px 25px;
     background: #fff;
 }
-.login-title{
+
+.login-title {
     font-weight: 600;
     letter-spacing: .2rem;
     font-size: 2rem;
     text-transform: uppercase;
     margin-bottom: .8rem;
 }
-.login-form{
-margin: 2rem 0;
+
+.login-form {
+    margin: 2rem 0;
 }
-.login-form input{
+
+.login-form input {
     width: 100%;
     padding: 1rem;
     font-size: 1.1rem;
@@ -37,14 +41,17 @@ margin: 2rem 0;
     border-radius: 0.25rem;
     border: 1px solid var(--gray);
 }
-.login-form input:last-child{
+
+.login-form input:last-child {
     margin-bottom: 0;
 }
-.login-form label{
+
+.login-form label {
     display: inline-block;
     margin-bottom: .5rem;
 }
-.login-button{
+
+.login-button {
     width: 100%;
     padding: 1rem 0;
     background-color: var(--secondary);
@@ -54,18 +61,39 @@ margin: 2rem 0;
     margin: .3rem 0;
     cursor: pointer;
 }
-.login-button:hover{
+
+.login-button:hover {
     background-color: var(--gray-dark);
-}   
-.login-container p{
+}
+
+.login-container p {
     margin: 0.5rem 0;
 }
-.loginLink{
+
+.loginLink {
     color: rgb(61, 113, 156);
     text-decoration: none;
 }
-@media screen and (max-width:500px){
-    .login-title{
+
+.login-container .googleLogin {
+    width: 100%;
+    padding: .4rem .9rem;
+    border: none;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #de5246;
+    color: white;
+}
+
+.login-container .googleLogin p {
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+@media screen and (max-width:500px) {
+    .login-title {
         font-size: 1.2rem;
     }
 }

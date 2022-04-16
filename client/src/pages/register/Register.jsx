@@ -4,6 +4,7 @@ import { useRef } from "react"
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom"
 import { publicRequest } from "../../requestMethod"
+import { Google } from "@mui/icons-material";
 const Register = () => {
     const navigate = useNavigate();
     const username = useRef();
@@ -47,6 +48,11 @@ const Register = () => {
                 </div>
                 <button className="register-button" onClick={btnClick}>Register</button>
                 <p>Already have an account? <Link className="registerLink" to="/">Login Now</Link> </p>
+                <h3 style={{ margin: "20px 0" }}>OR</h3>
+                <button className="googleSignup">
+                    <Google />
+                    <p>Signup with Google</p>
+                </button>
             </div>
         </div>
     )

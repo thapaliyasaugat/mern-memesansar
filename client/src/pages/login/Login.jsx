@@ -4,6 +4,7 @@ import { useRef } from "react"
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../redux/apiCalls";
+import { Google } from '@mui/icons-material';
 const Login = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch();
@@ -40,6 +41,11 @@ const Login = () => {
                 <button className="login-button" onClick={btnClick}>{!loading ? "Login" : "loading..."}</button>
                 {error && <p style={{ color: "#ee2727" }}>Error Logging in.</p>}
                 <p>You don't have an account? <Link className="loginLink" to="/register"> Register Now</Link></p>
+                <h3 style={{ margin: "20px 0" }}>OR</h3>
+                <button className="googleLogin">
+                    <Google />
+                    <p>Signin with Google</p>
+                </button>
             </div>
         </div>
     )
