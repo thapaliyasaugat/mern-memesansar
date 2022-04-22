@@ -75,7 +75,7 @@
     text-decoration: none;
 }
 
-.register-container .googleSignup {
+.register-container .googleLogin {
     width: 100%;
     padding: .4rem .9rem;
     border: none;
@@ -85,9 +85,10 @@
     align-items: center;
     background-color: #de5246;
     color: white;
+    cursor: pointer;
 }
 
-.register-container .googleSignup p {
+.register-container .googleLogin p {
     margin-left: 1rem;
     font-size: 1rem;
 }

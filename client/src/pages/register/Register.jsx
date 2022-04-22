@@ -5,6 +5,8 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom"
 import { publicRequest } from "../../requestMethod"
 import { Google } from "@mui/icons-material";
+import { GoogleLogin } from 'react-google-login';
+
 const Register = () => {
     const navigate = useNavigate();
     const username = useRef();
@@ -29,6 +31,12 @@ const Register = () => {
             toast.error("password's doesn't match")
         }
     }
+    const successresponseGoogle = () => {
+
+    }
+    const failureresponseGoogle = () => {
+
+    }
 
     return (
         <div className="register">
@@ -49,10 +57,18 @@ const Register = () => {
                 <button className="register-button" onClick={btnClick}>Register</button>
                 <p>Already have an account? <Link className="registerLink" to="/">Login Now</Link> </p>
                 <h3 style={{ margin: "20px 0" }}>OR</h3>
-                <button className="googleSignup">
-                    <Google />
-                    <p>Signup with Google</p>
-                </button>
+                <GoogleLogin
+                    clientId="542043003230-2ho424qv0j97dav2l50sigu347qv3055.apps.googleusercontent.com"
+                    render={(renderProps) => (
+                        <button className="googleLogin" onClick={renderProps.onClick} disabled={renderProps.disabled}>
+                            <Google />
+                            <p>Signup with Google</p>
+                        </button>
+                    )}
+                    onSuccess={successresponseGoogle}
+                    onFailure={failureresponseGoogle}
+                    cookiePolicy={'single_host_origin'}
+                />
             </div>
         </div>
     )

@@ -28,9 +28,10 @@ const Login = () => {
     }
     const successresponseGoogle = async (res) => {
         const result = res?.profileObj;
+        const token = res?.tokenId;
+        console.log(token);
         console.log(result);
-        // const token = res?.tokenId;
-        //continue
+
         try {
 
         } catch (error) {

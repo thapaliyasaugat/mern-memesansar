@@ -24,6 +24,7 @@ router.post('/register', async (req, res) => {
 //login user
 router.post('/login', async (req, res) => {
     try {
+        // console.log("login")
         const user = await User.findOne({ email: req.body.email });
         if (user) {
             const bytes = CryptoJS.AES.decrypt(user.password, process.env.SECRET);
